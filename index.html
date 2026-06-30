@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vritra — Your Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="watermark">VRITRA</div>
+  </div>
+
+  <main class="page">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-line"></div>
+      <div class="header-center">
+        <span class="header-pre">est. with love</span>
+        <h1 class="brand-name">Vritra</h1>
+        <span class="header-pre">handmade · desi core</span>
+      </div>
+      <div class="header-line"></div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">share your thoughts</p>
+      <h2 class="hero-title">How was your<br/><em>experience?</em></h2>
+      <p class="hero-body">Every word you share helps us craft something more beautiful for you next time.</p>
+    </section>
+
+    <!-- Card -->
+    <div class="card">
+      <div id="form-view">
+
+        <!-- Stars -->
+        <div class="field-group">
+          <label class="field-label">Overall experience <span class="req">*</span></label>
+          <div class="stars" id="star-group">
+            <input type="radio" name="rating" id="s5" value="5"><label for="s5">★</label>
+            <input type="radio" name="rating" id="s4" value="4"><label for="s4">★</label>
+            <input type="radio" name="rating" id="s3" value="3"><label for="s3">★</label>
+            <input type="radio" name="rating" id="s2" value="2"><label for="s2">★</label>
+            <input type="radio" name="rating" id="s1" value="1"><label for="s1">★</label>
+          </div>
+          <div class="error-msg" id="err-rating">Please select a star rating.</div>
+        </div>
+
+        <!-- What did you order -->
+        <div class="field-group">
+          <label class="field-label" for="order">What did you order? <span class="req">*</span></label>
+          <input type="text" id="order" placeholder="e.g. block print co-ord set, blue kurti…"/>
+          <div class="error-msg" id="err-order">Please tell us what you ordered.</div>
+        </div>
+
+        <!-- Fit -->
+        <div class="field-group">
+          <label class="field-label" for="fit">How was the fit? <span class="req">*</span></label>
+          <div class="select-wrap">
+            <select id="fit">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Perfect fit">Perfect fit</option>
+              <option value="Slightly loose">Slightly loose</option>
+              <option value="Slightly tight">Slightly tight</option>
+              <option value="Too big">Too big</option>
+              <option value="Too small">Too small</option>
+            </select>
+            <span class="select-chevron">&#8964;</span>
+          </div>
+          <div class="error-msg" id="err-fit">Please select how the fit was.</div>
+        </div>
+
+        <!-- Review -->
+        <div class="field-group">
+          <label class="field-label" for="review">Your review <span class="req">*</span></label>
+          <textarea id="review" placeholder="Tell us what you loved, what could be better…"></textarea>
+          <div class="error-msg" id="err-review">Please share a short review.</div>
+        </div>
+
+        <!-- Mood -->
+        <div class="field-group">
+          <label class="field-label">Overall mood <span class="req">*</span></label>
+          <div class="mood-group">
+            <input type="radio" name="mood" id="mood1" value="Loved it">
+            <label for="mood1">😍 Loved it</label>
+            <input type="radio" name="mood" id="mood2" value="It was okay">
+            <label for="mood2">😊 It was okay</label>
+            <input type="radio" name="mood" id="mood3" value="Needs work">
+            <label for="mood3">😐 Needs work</label>
+          </div>
+          <div class="error-msg" id="err-mood">Please pick your overall mood.</div>
+        </div>
+
+        <!-- Divider -->
+        <div class="form-divider">
+          <span>a little about you</span>
+        </div>
+
+        <!-- Name + Father Name -->
+        <div class="row-2">
+          <div class="field-group" style="margin-bottom:0">
+            <label class="field-label" for="name">Your name <span class="req">*</span></label>
+            <input type="text" id="name" placeholder="Priya"/>
+            <div class="error-msg" id="err-name">Please enter your name.</div>
+          </div>
+          <div class="field-group" style="margin-bottom:0">
+            <label class="field-label" for="fname">Father's name <span class="req">*</span></label>
+            <input type="text" id="fname" placeholder="Ramesh"/>
+            <div class="error-msg" id="err-fname">Please enter your father's name.</div>
+          </div>
+        </div>
+
+        <!-- City + Mobile -->
+        <div class="row-2" style="margin-top:20px">
+          <div class="field-group" style="margin-bottom:0">
+            <label class="field-label" for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" placeholder="Delhi"/>
+            <div class="error-msg" id="err-city">Please enter your city.</div>
+          </div>
+          <div class="field-group" style="margin-bottom:0">
+            <label class="field-label" for="mobile">Mobile number <span class="req">*</span></label>
+            <input type="tel" id="mobile" placeholder="98765 43210" maxlength="10"/>
+            <div class="error-msg" id="err-mobile">Please enter a valid 10-digit number.</div>
+          </div>
+        </div>
+
+        <button class="btn-submit" id="submit-btn" onclick="submitFeedback()">
+          <span id="btn-text">Share the Love ✨</span>
+        </button>
+
+        <p class="privacy-note">Your information is kept private and used only to improve your experience.</p>
+
+      </div>
+
+      <!-- Success -->
+      <div class="success-screen" id="success-view">
+        <div class="success-ornament">✦</div>
+        <h2 class="success-title">Thank you,<br/><em>truly.</em></h2>
+        <p class="success-body">Your words mean everything to us. We'll keep crafting Vritra with your love in mind — one stitch at a time.</p>
+        <div class="success-rule"></div>
+        <p class="success-brand">— Vritra</p>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <span>✦</span> nazar proof · handmade · desi core · eternal <span>✦</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

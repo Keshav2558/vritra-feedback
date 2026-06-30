@@ -53,7 +53,7 @@
 ════════════════════════════════════════════════════════════════════
 */
 
-const SHEET_URL = "YOUR_GOOGLE_SCRIPT_URL"; // ← paste your URL here
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzj1ChxHYBnqL9uu3HtzW13jelgYvbTNt_AIqswTc8wP5GXz6jJxT2jU-Ot8tnkSo-lHQ/exec"; // ← paste your URL here
 
 
 /* ── Helpers ── */
